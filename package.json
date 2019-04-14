@@ -1,0 +1,10 @@
+{
+  "name": "uprose-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Chintan Shah <chintan@wohlig.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bigchaindb-driver": "^4.1.0"
+  }
+}
