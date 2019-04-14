@@ -5,6 +5,9 @@
   "author": "Chintan Shah <chintan@wohlig.com>",
   "license": "MIT",
   "dependencies": {
-    "bigchaindb-driver": "^4.1.0"
+    "base58": "^2.0.1",
+    "bigchaindb-driver": "^4.1.0",
+    "bip39": "^3.0.1",
+    "tweetnacl": "^1.0.1"
   }
 }
