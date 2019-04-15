@@ -8,8 +8,8 @@ module.exports = {
     delete tokenCreator.secretKey;
     return tokenCreator;
   },
-  signTransaction: function(tx, privateKey) {
-    return BigchainDB.Transaction.signTransaction(tx, privateKey);
+  signTransaction: function(tx, tokenCreator) {
+    return BigchainDB.Transaction.signTransaction(tx, tokenCreator.privateKey);
   },
   postTransaction: function(txSigned, callback) {
     conn
@@ -20,5 +20,27 @@ module.exports = {
       .catch(function(err) {
         callback(err);
       });
+  },
+  uproseTokenTransaction: function(tokenCreator) {
+    console.log(Config.tokenName);
+    return BigchainDB.Transaction.makeCreateTransaction(
+      {
+        token: Config.tokenName,
+        number_tokens: Config.nTokens
+      },
+      // Metadata field, contains information about the transaction itself
+      // (can be `null` if not needed)
+      {
+        datetime: new Date().toString()
+      },
+      // Output: Divisible asset, include nTokens as parameter
+      [
+        BigchainDB.Transaction.makeOutput(
+          BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey),
+          nTokens.toString()
+        )
+      ],
+      tokenCreator.publicKey
+    );
   }
 };

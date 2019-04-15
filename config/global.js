@@ -1,3 +1,4 @@
+global.Config = require("./config.js");
 global.BigchainDB = require("bigchaindb-driver");
 global.nacl = require("tweetnacl");
 global.base58 = require("bs58");
