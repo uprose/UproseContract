@@ -11,5 +11,14 @@ module.exports = {
   signTransaction: function(tx, privateKey) {
     return BigchainDB.Transaction.signTransaction(tx, privateKey);
   },
-  postTransaction: function(txSigned, callback) {}
+  postTransaction: function(txSigned, callback) {
+    conn
+      .postTransactionCommit(txSigned)
+      .then(function(res) {
+        callback(null, res);
+      })
+      .catch(function(err) {
+        callback(err);
+      });
+  }
 };
