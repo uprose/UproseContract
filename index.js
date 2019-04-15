@@ -15,3 +15,5 @@ function createToken() {
     console.log(err, data);
   });
 }
+
+createToken();

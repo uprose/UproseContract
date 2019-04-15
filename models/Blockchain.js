@@ -37,7 +37,7 @@ module.exports = {
       [
         BigchainDB.Transaction.makeOutput(
           BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey),
-          nTokens.toString()
+          Config.nTokens.toString()
         )
       ],
       tokenCreator.publicKey
