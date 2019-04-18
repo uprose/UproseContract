@@ -30,4 +30,4 @@ Uprose is an open-source project and contributions are welcome!
 
 ## **Acknowledgements**
 
-![alt text](https://raw.githubusercontent.com/uprose/UproseContract/master/bigchaindb.png)
+[![alt text](https://raw.githubusercontent.com/uprose/UproseContract/master/bigchaindb.png)](https://bigchaindb.com)
