@@ -22,7 +22,7 @@ Uprose Contract is an open source blockchain project, designed for decentralized
 - [Instagram](https://www.instagram.com/uproseexchange/)
 - [LinkedIn](https://www.linkedin.com/company/uprose/)
 - [Reddit](https://www.reddit.com/user/UproseFinMart)
-- [Youtube](https://www.youtube.com/channel/UCwk5xBw5ufJagKNdYNsvReA)
+- [YouTube](https://www.youtube.com/channel/UCwk5xBw5ufJagKNdYNsvReA)
 
 ## **Contributing**
 
