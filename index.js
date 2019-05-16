@@ -3,6 +3,7 @@ require("./config/global.js");
 var Blockchain = require("./models/Blockchain.js");
 
 var tokenCreator = Blockchain.createUser();
+console.log("User Creds: ", JSON.stringify(tokenCreator));
 function createToken() {
   // Construct a transaction payload
   var tx = Blockchain.uproseTokenTransaction(tokenCreator);
@@ -12,7 +13,7 @@ function createToken() {
 
   // Send the transaction off to BigchainDB
   Blockchain.postTransaction(txSigned, function(err, data) {
-    console.log(err, data);
+    console.log(JSON.stringify(data));
   });
 }
 

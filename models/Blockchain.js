@@ -42,5 +42,15 @@ module.exports = {
       ],
       tokenCreator.publicKey
     );
+  },
+  findAssert: function(user, callback) {
+    conn
+      .listOutputs(user.publicKey, false)
+      .then(function(assets) {
+        callback(null, assets);
+      })
+      .catch(function(error) {
+        callback(err);
+      });
   }
 };
