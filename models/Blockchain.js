@@ -22,7 +22,7 @@ module.exports = {
       });
   },
   uproseTokenTransaction: function(tokenCreator) {
-    console.log(Config.tokenName);
+    var totalTokens = Config.nTokens * Math.pow(10, Config.decimal);
     return BigchainDB.Transaction.makeCreateTransaction(
       {
         token: Config.tokenName,
@@ -37,7 +37,7 @@ module.exports = {
       [
         BigchainDB.Transaction.makeOutput(
           BigchainDB.Transaction.makeEd25519Condition(tokenCreator.publicKey),
-          Config.nTokens.toString()
+          totalTokens.toString()
         )
       ],
       tokenCreator.publicKey
